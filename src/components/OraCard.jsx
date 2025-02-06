@@ -1,14 +1,14 @@
-const OraCard = (props) => {
+const OraCard = ({oraSzam, cim, children, onKartyaTorles}) => {
     return (
         
         <article className="ora">
         <header>
-          <h3>{props.oraSzam}</h3>
+          <h3>{oraSzam}</h3>
           <button className="icon-button">📝</button>
-          <button className="icon-button">🗑️</button>
+          <button className="icon-button" onClick={onKartyaTorles}>🗑️</button>
         </header>
-        <h4>{props.cim}</h4>
-        <p>{props.children}</p>
+        <h4>{cim}</h4>
+        <p>{children}</p>
       </article>
     );
   };
